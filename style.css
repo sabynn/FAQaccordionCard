@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+
+.FAQ-container {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+}
+
+.inside-container {
+    width: 790px;
+    height: 425px;
+    display: flex;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-position: -260% 65%;
+    background-size: 650px 700px;
+    background-repeat: no-repeat;
+}
+
+.pic {
+    position: relative;
+    left: -15%;
+    top: 40px;
+    transform: scale(0.75);
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 120px;
+    top: 65px;
+    width: 80%;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 450;
+    box-sizing: border-box;
+    width: 410px;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.question:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 35px;
+    font-size: 25px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.question img {
+    margin: 3px 60px;
+    height: 10px
+}
+
+.answer {
+    width: 300px;
+    display: none;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 2px;
+    width: 350px;
+    background-color: hsl(240, 5%, 91%);
+}
+
+.box-pic {
+    position: relative;
+    top: 55px;
+    right: 420px;
+    z-index: 1;
+    height: 150px;
+}
+
+.woman-pic-mobile {
+    display: none;
+}
+
+.attribution {
+    position: absolute;
+    display: flex;
+    z-index:1;
+    bottom:0;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 950px) {
+    .inside-container {
+        width: 350px;
+        height: 550px;
+        background-image: url("images/bg-pattern-mobile.svg");
+        background-position: -260% 65%;
+        background-size: 650px 700px;
+
+    }
+    .FAQ-container {
+        overflow: visible;
+    }
+
+    .box-pic, .woman-pic-desktop {
+        display: none;
+    }
+
+    .FAQ {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .question {
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        margin-left:50px ;
+    }
+
+    .question img {
+        margin: 3px 70px;
+    }
+
+    .woman-pic-mobile {
+        position: absolute;
+        top:-220px;
+        left: 150px;
+        display: block;
+        transform: scale(1.3);
+    }
+}
